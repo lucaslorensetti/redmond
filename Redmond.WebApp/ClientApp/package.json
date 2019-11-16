@@ -23,7 +23,6 @@
     "@angular/router": "8.2.14",
     "@ng-bootstrap/ng-bootstrap": "^5.1.4",
     "@nguniversal/aspnetcore-engine": "^8.1.1",
-    "@nguniversal/module-map-ngfactory-loader": "^8.1.1",
     "aspnet-prerendering": "^3.0.1",
     "core-js": "^2.6.5",
     "jquery": "3.4.1",
