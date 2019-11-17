@@ -8,7 +8,7 @@ namespace Redmond.SharedKernel.Interfaces
         IQueryable<TEntity> GetQueryable<TEntity>()
             where TEntity : class, IEntity;
 
-        Task InsertAsync<TEntity>(TEntity entity)
+        Task CreateAsync<TEntity>(TEntity entity)
             where TEntity : class, IEntity;
 
         Task UpdateAsync<TEntity>(TEntity entity)
@@ -17,8 +17,8 @@ namespace Redmond.SharedKernel.Interfaces
         Task DeleteAsync<TEntity>(TEntity entity)
             where TEntity : class, IEntity;
 
-        Task BeginTransactionAsync();
         Task SaveChangesAsync();
+        Task BeginTransactionAsync();
         Task CommitTransactionAsync();
         Task RollbackTransactionAsync();
         Task<bool> HasChangesAsync();

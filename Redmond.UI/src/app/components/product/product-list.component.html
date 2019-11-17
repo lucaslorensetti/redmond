@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Products</span>
+        <button class="btn btn-primary btn-card float-right" (click)="add()">Add</button>
+      </div>
+      <div class="card-body">
+        <span>Search filters</span>
+        <div class="form-row">
+          <div class="col">
+            <input class="form-control form-control-sm" type="text" placeholder="Name"
+              (input)="vm.setName($event.target.value)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <table class="table table-sm table-bordered bg-white" *ngIf="vm.getProducts().length > 0 else noProducts">
+      <tr>
+        <th class="small">Name</th>
+        <th class="small">Price</th>
+        <th class="small text-center" width="1">Options</th>
+      </tr>
+      <tr *ngFor="let product of vm.getProducts()">
+        <td class="small">{{product.name}}</td>
+        <td class="small">{{product.price}}</td>
+        <td class="text-center">
+          <div class="btn-group" role="group">
+            <button class="btn btn-secondary btn-xs" type="button" (click)="edit(product.productId)">
+              <fa-icon [icon]="faPencilAlt"></fa-icon>
+            </button>
+            <button class="btn btn-danger btn-xs" type="button" (click)="delete(product.productId)">
+              <fa-icon [icon]="faTrashAlt"></fa-icon>
+            </button>
+
+          </div>
+        </td>
+      </tr>
+    </table>
+    <ng-template #noProducts>
+      <div class="card">
+        <div class="card-body text-center">
+          <span>There is no products.</span>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>

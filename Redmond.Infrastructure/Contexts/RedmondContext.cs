@@ -25,7 +25,7 @@ namespace Redmond.Infrastructure.Contexts
             return this.Set<TEntity>();
         }
 
-        public async Task InsertAsync<TEntity>(TEntity entity)
+        public async Task CreateAsync<TEntity>(TEntity entity)
             where TEntity : class, IEntity
         {
             await this.Set<TEntity>().AddAsync(entity);
@@ -45,14 +45,14 @@ namespace Redmond.Infrastructure.Contexts
             return Task.CompletedTask;
         }
 
-        public async Task BeginTransactionAsync()
-        {
-            await this.Database.BeginTransactionAsync();
-        }
-
         public async Task SaveChangesAsync()
         {
             await base.SaveChangesAsync();
+        }
+
+        public async Task BeginTransactionAsync()
+        {
+            await this.Database.BeginTransactionAsync();
         }
 
         public Task CommitTransactionAsync()

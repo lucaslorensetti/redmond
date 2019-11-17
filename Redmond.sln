@@ -9,13 +9,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Redmond.Infrastructure", "R
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Redmond.Application", "Redmond.Application\Redmond.Application.csproj", "{70127385-B3B4-4C1E-A0CF-02A085390D9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redmond.API", "Redmond.API\Redmond.API.csproj", "{B99FE5C1-394F-4329-9777-D425DEF95EF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Redmond.API", "Redmond.API\Redmond.API.csproj", "{B99FE5C1-394F-4329-9777-D425DEF95EF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redmond.SharedKernel", "Redmond.SharedKernel\Redmond.SharedKernel.csproj", "{0C252587-6825-47B3-AD45-1C9EF5197259}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Redmond.SharedKernel", "Redmond.SharedKernel\Redmond.SharedKernel.csproj", "{0C252587-6825-47B3-AD45-1C9EF5197259}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{AB0379DE-D77D-4F29-8785-88831C51C0C6}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		.gitignore = .gitignore
 	EndProjectSection
 EndProject
 Global

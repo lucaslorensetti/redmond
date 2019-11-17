@@ -29,7 +29,8 @@ namespace Redmond.Application.Queries
             var selectedProducts = products.Select(product => new GetAllProductsResult
             {
                 ProductId = product.Id,
-                Name = product.Name
+                Name = product.Name,
+                Price = product.Price
             });
 
             return await selectedProducts.ToListAsync();

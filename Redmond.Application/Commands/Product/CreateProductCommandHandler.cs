@@ -25,7 +25,7 @@ namespace Redmond.Application.Commands
                 Price = command.Price
             };
 
-            await this.dbContext.InsertAsync(product);
+            await this.dbContext.CreateAsync(product);
 
             return new OperationResult(product.Id);
         }

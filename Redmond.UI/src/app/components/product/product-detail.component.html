@@ -1,0 +1,23 @@
+<div class="modal-header">
+  <h5 class="modal-title">Product</h5>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-10">
+      <label for="name">Name</label>
+      <input type="text" class="form-control form-control-sm" id="name" ngbAutofocus required autocomplete="off"
+        [ngClass]="{ 'is-invalid':!vm.nameIsValid(), 'is-valid':vm.nameIsValid() }"
+        [(ngModel)]="vm.name" [maxLength]="50" />
+    </div>
+    <div class="col-2">
+      <label for="Price">Price</label>
+      <input type="number" class="form-control form-control-sm" id="price" required autocomplete="off"
+      [ngClass]="{ 'is-invalid':!vm.priceIsValid(), 'is-valid':vm.priceIsValid() }"
+      [(ngModel)]="vm.price" />
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-success btn-sm" [disabled]="!vm.isValid()" (click)="save()">Save</button>
+  <button type="button" class="btn btn-primary btn-sm" (click)="close()">Close</button>
+</div>

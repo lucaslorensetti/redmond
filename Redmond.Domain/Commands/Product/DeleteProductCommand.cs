@@ -10,7 +10,7 @@ namespace Redmond.Domain.Commands
 
         public DeleteProductCommand(Guid productId)
         {
-            this.ProductId = ProductId;
+            this.ProductId = productId;
         }
     }
 }
