@@ -1,2 +1,2 @@
-# redmond
-ASP.NET Core 3.0, CQRS, SQL Server, Angular 8, Bootstrap 4.3
+# Redmond
+Simple CRUD with Angular 8, ASP.NET Core 3.0 WebApi, CQRS, Entity Framework Core, SQL Server
